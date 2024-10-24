@@ -1,0 +1,116 @@
+html {
+    scroll-behavior: smooth; 
+}
+
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://i.redd.it/gfw2ukubmu091.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+    line-height: 1.6;
+    animation: fadeIn 2s ease-in; 
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 1.5em 0;
+    font: medium 0;
+}
+
+#menu-toggle {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    text-align: center;
+    display: none; 
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 10px 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+main {
+    padding: 20px;
+    background-color: rgba(255, 242, 242, 0.5); 
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 10px;
+}
+
+section {
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; 
+}
+
+section.visible {
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: 1.3em;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#main-nav.show {
+    display: block;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
